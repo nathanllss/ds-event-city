@@ -17,4 +17,8 @@ public class CityService {
     public List<City> findAllCitiesSortedByName() {
         return cityRepository.findAll(Sort.by("name"));
     }
+
+    public City saveCity(City city) {
+        return cityRepository.save(city);
+    }
 }
